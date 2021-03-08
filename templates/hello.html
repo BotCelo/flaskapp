@@ -1,0 +1,24 @@
+<!doctype html>
+<title>tibiaapi</title>
+
+<h1>input a noob name</h1>
+
+
+<form method="POST">
+    <input name="text">
+    <input type="submit">
+</form>
+
+<div>
+
+{% block content %}
+
+    {% for datas in char %}
+        <span>{{ datas }}</span>
+        <span></span>
+    {% endfor %}
+
+{% endblock %}
+
+    
+</div>
