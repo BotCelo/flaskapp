@@ -1,5 +1,6 @@
 <!doctype html>
 <title>tibiaapi</title>
+<link rel="stylesheet" href="static\\main.css">
 
 <h1>input a noob name</h1>
 
@@ -11,14 +12,13 @@
 
 <div>
 
-{% block content %}
-
-    {% for datas in char %}
-        <span>{{ datas }}</span>
-        <span></span>
+{% if chars %}
+    {% for key, value in chars['characters']['data'].items() %}
+        <h1>Key: {{ key }}</h1>
+        <h2>Value: {{ value }}</h2>
     {% endfor %}
 
-{% endblock %}
+{% endif %}
 
-    
 </div>
+
